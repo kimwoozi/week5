@@ -1,57 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <title>index</title>
+</head>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body>
+  
+  <div class="d-flex flex-grow-1 vh-100">
+    <!-- <%- include('./layout/Sidebar'); -%> -->
+    <%- include('./layout/sidebar',{page:"index"}); -%>
+      <!-- <div class="sidebar  col-3 vh-100">
+          
+        </div> -->
+      <div class="col-9 p-5 d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex justify-content-between mb-6">
+            <div class="d-flex align-items-center">
+              <h4 class="m-0 pe-7">Admin</h4>
+              <button type="button" class="btn d-flex align-items-center border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="d-inline material-icons text-success pe-2">add</i>
+                <p class="d-inline m-0">Add New Admin</p>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content d-flex">
+                    <img src="/assets/images/emir.jpeg" alt="">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- Modal -->
+              <i class="material-icons pe-4">search</i>
+              <i class="material-icons">notifications_active</i>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+
+
+          <table class="table table-hover">
+            <thead class="border-bottom border-secondary">
+              <tr>
+                <th scope="col" class="col-2">
+                  <div class="d-flex justify-content-starts align-items-center">
+                    <div class="text-success me-1">ID</div>
+                    <i class="material-icons">arrow_downward</i>
+                  </div>
+                </th>
+                <th scope="col" class="col-3">Name</th>
+                <th scope="col" class="col-4">Email</th>
+                <th scope="col" class="col-2">Verified</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#4</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#5</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#6</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#7</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#8</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#9</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+              <tr>
+                <th scope="row">#10</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons">edit</i></td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end text-success">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&lt;</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true"> &gt;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
       </div>
-    </div>
+  </div>
 
-    <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+
+
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
