@@ -21,29 +21,50 @@
         </div> -->
       <div class="col-9 p-5 d-flex flex-column justify-content-between">
         <div>
-          <div class="d-flex justify-content-between mb-6">
+          <div class="d-flex justify-content-between align-items-center mb-6">
             <div class="d-flex align-items-center">
-              <h4 class="m-0 pe-7">Admin</h4>
+              <h4 class="fw-bold m-0 pe-7">Admin</h4>
               <button type="button" class="btn d-flex align-items-center border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="d-inline material-icons text-success pe-2">add</i>
-                <p class="d-inline m-0">Add New Admin</p>
+                <p class="d-inline fw-bold m-0">Add New Admin</p>
               </button>
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content d-flex">
-                    <img src="/assets/images/emir.jpeg" alt="">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content rounded-0">
+                    <div class="modal-body p-5">
+                      <div class="container-fluid">
+            
+                        <div class="row d-flex justify-content-between">
+                          <div class="col-3 square-image " style="background-color: aquamarine;">
+                            <!-- <img src="../assets/images/emir.jpeg" class="square-image" alt="emir"> -->
+                          </div>
+                          <div class="col-8 ps-4 pe-0">
+                            <div class="d-flex justify-content-between">
+                              <h5 class="modal-title" id="exampleModalLabel">#1</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div>
+                              <h6>Admin</h6>
+                              <h4>Emir Wicks</h4>
+                              <span class="text-secondary">emir.wicks@mail.com</span>
+                              <div class="d-flex align-items-center justify-content-between mt-4 mb-5">
+                                <button type="button" class="btn btn-light rounded-0 px-2 py-1 m-0">Verified</button>
+            
+                                <button type="button" class="btn btn-default p-0" data-bs-toggle="collapse"
+                                  data-bs-target="#expand_more" aria-expanded="false" aria-controls="expand_more"><i
+                                    class="material-icons text-success d-flex">expand_more</i></button>
+                              </div>
+                              <div class="collapse multi-collapse" id="expand_more">
+                                <div class="d-flex justify-content-between">
+                                  <button type="button" class="btn btn-outline-danger rounded-0 px-5">Deactivate</button>
+                                  <button type="button" class="btn btn-success rounded-0 px-5">Edit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -51,8 +72,14 @@
             </div>
             <div>
               <!-- Modal -->
-              <i class="material-icons pe-4">search</i>
-              <i class="material-icons">notifications_active</i>
+              
+              <button type="button" class="btn btn-0 border-0 bg-transparent pe-4">
+                <i class="d-inline material-icons">search</i>
+              </button>
+              <button type="button" class="btn btn-0 border-0 bg-transparent ">
+                <i class="d-inline material-icons">notifications_active</i>
+              </button>
+
             </div>
           </div>
 
@@ -62,8 +89,8 @@
               <tr>
                 <th scope="col" class="col-2">
                   <div class="d-flex justify-content-starts align-items-center">
-                    <div class="text-success me-1">ID</div>
-                    <i class="material-icons">arrow_downward</i>
+                    <div class="me-1">ID</div>
+                    <i class="material-icons text-success">arrow_downward</i>
                   </div>
                 </th>
                 <th scope="col" class="col-3">Name</th>
@@ -78,7 +105,7 @@
                 <td>Emir Wicks</td>
                 <td>emir.wicks@mail.com</td>
                 <td>Yes</td>
-                <td><i class="material-icons">remove_red_eye</i></td>
+                <td><i class="material-icons hover">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
@@ -99,56 +126,56 @@
               </tr>
               <tr>
                 <th scope="row">#4</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#5</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#6</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#7</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#8</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#9</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
               </tr>
               <tr>
                 <th scope="row">#10</th>
-                <td>Mahima Lopez</td>
-                <td>mahima.lopez@mail.com</td>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
                 <td>Yes</td>
                 <td><i class="material-icons">remove_red_eye</i></td>
                 <td><i class="material-icons">edit</i></td>
@@ -157,6 +184,7 @@
           </table>
 
         </div>
+
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-end text-success">
             <li class="page-item">
@@ -174,14 +202,8 @@
             </li>
           </ul>
         </nav>
-
-
       </div>
   </div>
-
-
-
-
   <script type="module" src="../main.js"></script>
 </body>
 
